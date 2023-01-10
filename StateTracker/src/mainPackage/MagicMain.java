@@ -30,6 +30,8 @@ import org.json.JSONObject;
 
 import com.github.lbovolini.mapper.ObjectMapper;
 
+import httpConnector.MyHttpGateWay;
+
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.SerializerProvider;
@@ -121,6 +123,15 @@ public class MagicMain extends Thread {
 		Properties catalogProps = new Properties();
 		catalogProps.load(new FileInputStream(appConfigPath));
 		
+		MyHttpGateWay myMyHttpGateWay = new MyHttpGateWay();
+		
+		
+		try {
+			int errCode = myMyHttpGateWay.doCallRest();
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
 		
 		//SendEmail snd = new SendEmail();
 
@@ -141,7 +152,9 @@ public class MagicMain extends Thread {
 		
 		try
 		{
-			 
+			
+			
+			
 			Set<String> fileList1 = listFilesUsingDirectoryStreamFilter(catalogProps.getProperty("file.repoI"),"StateTracker-(StoricoS)-PROD-([A-Z0-9\\\\.\\\\-])*\\.(txt)");
 			Set<String> fileList2 = listFilesUsingDirectoryStreamFilter(catalogProps.getProperty("file.repoI"),"StateTracker-(Storico)-DATI-([A-Z0-9\\\\.\\\\-])*\\.(txt)");
 			Set<String> fileList3 = listFilesUsingDirectoryStreamFilter(catalogProps.getProperty("file.repoI"),"StateTracker-(Storico)-PROD-([A-Z0-9\\\\.\\\\-])*\\.(txt)");
