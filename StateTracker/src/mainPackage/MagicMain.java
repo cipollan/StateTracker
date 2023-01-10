@@ -133,6 +133,13 @@ public class MagicMain extends Thread {
 			e1.printStackTrace();
 		}
 		
+		try {
+			int errCode = myMyHttpGateWay.doCallRest2();
+		} catch (Exception e1) {
+			// TODO Auto-generated catch block
+			e1.printStackTrace();
+		}
+		
 		//SendEmail snd = new SendEmail();
 
 		String iRepo = catalogProps.getProperty("file.scriptBatchI");

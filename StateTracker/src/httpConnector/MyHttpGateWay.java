@@ -17,13 +17,25 @@ public class MyHttpGateWay {
 	public int doCallRest() throws Exception
 	{
 		int errCode = 200;
+		System.out.println ( " BEGIN MyHttpGateWay.doCallRest  "  ); 
 		MyHttpClient myHttpClient = new MyHttpClient();
 		String token              = InvokeRESTService.getToken(myUrl, user, password) ;
 		String jsonInput = "Ciao:Ciao";
 		
 		String response =  InvokeRESTService.invokeRestApi("GET", myUrl, token,  jsonInput);
 		
-		System.out.println ( " MyHttpGateWay.doCallRest token:" + token); 
+		System.out.println ( " END MyHttpGateWay.doCallRest token:" + token); 
+		return errCode;
+	}
+	
+	public int doCallRest2() throws Exception
+	{
+		int errCode = 200;
+		System.out.println ( " BEGIN MyHttpGateWay.doCallRest2  " ); 
+		MyHttpClient myHttpClient = new MyHttpClient();
+		myHttpClient.setStubsApiBaseUri(myUrl);
+		errCode = myHttpClient.doCallApi();
+		System.out.println ( " END MyHttpGateWay.doCallRest2  " ); 
 		return errCode;
 	}
 	

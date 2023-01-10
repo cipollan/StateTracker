@@ -14,10 +14,12 @@ import org.xml.sax.*;
 
 public class MyHttpClient {
 	
+	String stubsApiBaseUri = "http://localhost:7819/RTCP/rest/stubs/";
+	
 	public int doCallApi() 
 	{
 		int errCode = 200;
-	    String stubsApiBaseUri = "http://localhost:7819/RTCP/rest/stubs/";
+	    
         String domain = "default";
         String environment = "addNumbers";
         String stubName = "1+1=2";
@@ -84,6 +86,14 @@ public class MyHttpClient {
 
        
 		return errCode;
+	}
+
+	public synchronized String getStubsApiBaseUri() {
+		return stubsApiBaseUri;
+	}
+
+	public synchronized void setStubsApiBaseUri(String stubsApiBaseUri) {
+		this.stubsApiBaseUri = stubsApiBaseUri;
 	}
 	
 
