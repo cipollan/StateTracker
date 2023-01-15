@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry exported="true" kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="StateTracker/src"/>
+	<classpathentry kind="src" path="StateTracker/resource"/>
+	<classpathentry kind="lib" path="C:/Users/Utente/git/StateTracker/StateTracker/src/externalLibs/httpclient5-5.2.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Utente/git/StateTracker/StateTracker/src/externalLibs/httpclient-4.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Utente/git/StateTracker/StateTracker/src/externalLibs/httpcore-4.4.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Utente/git/StateTracker/StateTracker/src/externalLibs/javax.mail-api-1.6.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Utente/git/StateTracker/StateTracker/src/externalLibs/org.json.jar"/>
+	<classpathentry kind="lib" path="StateTracker/resource/config.properties"/>
+	<classpathentry kind="output" path="StateTracker/bin"/>
+</classpath>
