@@ -116,6 +116,8 @@ public class MagicMain extends Thread {
 		String rootPath = Thread.currentThread().getContextClassLoader().getResource("").getPath();
 		String appConfigPath = rootPath + "config.properties";
 		String catalogConfigPath = rootPath + "catalog";
+		
+		System.out.println ("MagicMain "  );
 		 
 		Properties appProps = new Properties();
 		appProps.load(new FileInputStream(appConfigPath));
@@ -139,6 +141,8 @@ public class MagicMain extends Thread {
 			// TODO Auto-generated catch block
 			e1.printStackTrace();
 		}
+		
+		
 		
 		//SendEmail snd = new SendEmail();
 

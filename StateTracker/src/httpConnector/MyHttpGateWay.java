@@ -2,12 +2,10 @@ package httpConnector;
 
 public class MyHttpGateWay {
 	
-	private String myUrl = "http://iesofficinameccanica.altervista.org/php/myserviceprovider.php";
+	private String myUrl = "https://myonionlab.altervista.org/php/myserviceprovider.php?TagFunct=CHECKCONNECTION&MachineName=MachineName&UserName=USER_NAME&Pwd=Ciao";
 	 
 	private String user = "Andre";
 	private String password = "Andre";
-	
-	
 	
 	public MyHttpGateWay() {
 		super();
